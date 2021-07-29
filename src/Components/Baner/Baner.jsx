@@ -1,5 +1,7 @@
 import {Image} from '../Image/Image'
 import {Button} from '../Button/Button'
+import {Link} from "react-router-dom";
+
 import qr from './qr.svg'
 
 export function Baner() {
@@ -8,7 +10,8 @@ export function Baner() {
 			<div>Исполните мечту вашего малыша! Подарите ему собаку!</div>
 			<Image src={qr}/>
 			<div>Сканируйте QR-код или нажмите ОК</div>
-			<Button>OK</Button>
+			<Link to={'/promo'}><Button>OK</Button></Link>
+			
 		</div>
 	)
 }
