@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import InputMask from "react-input-mask";
 import {Button} from '../Button/Button'
 import {CheckBox} from '../CheckBox/CheckBox'
+
 
 
 export function PromoForm({onSubmit}) {
@@ -9,6 +11,9 @@ export function PromoForm({onSubmit}) {
 	const [check, setCheck] = useState(false)
 
 	const handleClick = (e) => {
+		if (number.length >= 10) {
+			return
+		}
 		setNumber(`${number}`+`${e.target.value}`)
 	}
 
@@ -22,7 +27,8 @@ export function PromoForm({onSubmit}) {
 		<div>
 			<div>Введите ваш номер мобильного телефона</div>
 			<form onSubmit={() => {onSubmit(false)}}>
-				<input type="text" value={number} onChange={(e) => {setNumber(e.target.value)}}/>
+				<InputMask value={number} mask="+7(999)-999-99-99" alwaysShowMask={true} onChange={(e) => {setNumber(e.target.value)}}/>
+				{/* <input type="text" value={number} onChange={(e) => {setNumber(e.target.value)}}/> */}
 				<div>и с Вами свяжется наш менеждер для дальнейшей консультации</div>
 				<div>
 					<Button onClick={handleClick} value='1'>1</Button>
