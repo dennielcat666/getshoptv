@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import InputMask from "react-input-mask";
 import {Button} from '../Button/Button'
 import {CheckBox} from '../CheckBox/CheckBox'
 
-
-
 export function PromoForm({onSubmit}) {
 
 	const [number, setNumber] = useState('')
-	const [check, setCheck] = useState(false)
+	const [checked, setCheck] = useState(false)
+	const [disabled, setDisabled] = useState(true)
 
 	const handleClick = (e) => {
 		if (number.length >= 10) {
@@ -21,6 +20,14 @@ export function PromoForm({onSubmit}) {
 		const newNumber = number.slice(0, -1)
 		setNumber(newNumber)
 	}
+
+	useEffect(() => {
+		if (number.length === 10 && checked) {
+			setDisabled(false)
+			return
+		}
+		setDisabled(true)
+	}, [number, checked])
 
 	return (
 		<div>
@@ -46,8 +53,12 @@ export function PromoForm({onSubmit}) {
 					<Button onClick={deleteChar}>стереть</Button>
 					<Button onClick={handleClick} value='0'>0</Button>
 				</div>
-				<CheckBox checked={check} onChange={setCheck} />
-				<Button type="submit" >Подтвердить номер</Button>
+				<CheckBox checked={checked} onChange={setCheck} />
+				<Button
+					type="submit"
+					disabled={disabled}>
+					Подтвердить номер
+				</Button>
 			</form>
 		</div>
 	)
