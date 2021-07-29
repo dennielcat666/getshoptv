@@ -18,17 +18,20 @@ export function PromoForm({onSubmit}) {
 	}
 
 	const deleteChar = () => {
-		const startStr = number
-		const newNamber = startStr.slice(0, -1)
-		setNumber(newNamber)
+		const newNumber = number.slice(0, -1)
+		setNumber(newNumber)
 	}
 
 	return (
 		<div>
 			<div>Введите ваш номер мобильного телефона</div>
 			<form onSubmit={() => {onSubmit(false)}}>
-				<InputMask value={number} mask="+7(999)-999-99-99" alwaysShowMask={true} onChange={(e) => {setNumber(e.target.value)}}/>
-				{/* <input type="text" value={number} onChange={(e) => {setNumber(e.target.value)}}/> */}
+				<InputMask
+					value={number}
+					mask="+7(999)-999-99-99"
+					alwaysShowMask={true}
+					onChange={(e) => {setNumber(e.target.value)}}
+				/>
 				<div>и с Вами свяжется наш менеждер для дальнейшей консультации</div>
 				<div>
 					<Button onClick={handleClick} value='1'>1</Button>
@@ -43,7 +46,7 @@ export function PromoForm({onSubmit}) {
 					<Button onClick={deleteChar}>стереть</Button>
 					<Button onClick={handleClick} value='0'>0</Button>
 				</div>
-				<CheckBox />
+				<CheckBox checked={check} onChange={setCheck} />
 				<Button type="submit" >Подтвердить номер</Button>
 			</form>
 		</div>

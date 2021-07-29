@@ -6,7 +6,6 @@ import './App.css';
 
 
 export function App() {
-//   return <BanerPage />;
 	return (
 		<Router>
 			<Switch>

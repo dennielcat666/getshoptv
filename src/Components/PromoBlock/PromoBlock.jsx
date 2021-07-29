@@ -9,7 +9,6 @@ export function PromoBlock() {
 
 	return (
 		<div>
-			{/* <button onClick={() => setShowForm(false)}>btn</button> */}
 			{showForm ? <PromoForm onSubmit={setShowForm} /> : <PromoFinal />}
 		</div>
 	)
