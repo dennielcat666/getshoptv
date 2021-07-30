@@ -4,7 +4,7 @@ import styles from './Button.module.css';
 export function Button({children, className, onClick, type='button', value, disabled}) {
 	return (
 		<button
-			className={cn(styles.button, {
+			className={cn(styles.button, className, {
 				[styles.disabled]: disabled,
 			})}
 			onClick={onClick}

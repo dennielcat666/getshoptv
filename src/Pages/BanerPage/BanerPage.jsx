@@ -1,10 +1,11 @@
-// import React from 'react'
 import {Baner} from '../../Components/Baner/Baner'
+
+import styles from './BanerPage.module.css';
 
 export function BanerPage() {
 	return (
-		<div>
-			<video src="#"></video>
+		<div className={styles.banerPage}>
+			{/* <video src="#"></video> */}
 			<Baner/>
 		</div>	
 	)

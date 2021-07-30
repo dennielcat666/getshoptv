@@ -1,5 +1,8 @@
-export function Image({src}) {
+import cn from 'classnames'
+import styles from './Image.module.css';
+
+export function Image({src, className}) {
 	return (
-		<img src={src} alt="" />
+		<img className={cn(styles.img, className)} src={src} alt="" />
 	)
 }

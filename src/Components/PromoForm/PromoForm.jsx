@@ -120,3 +120,7 @@ export function PromoForm({onSubmit}) {
 		</div>
 	)
 }
+
+// PromoForm.propTypes = {
+
+// }

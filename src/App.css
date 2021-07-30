@@ -5,9 +5,13 @@
 	outline: none;
 }
 
-/* body {
-	background-color: #e5f0fb;
-} */
+body {
+	background-image: url('./baner.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1280px;
+	height: 720px;
+}
 
 li {
 	list-style: none;
