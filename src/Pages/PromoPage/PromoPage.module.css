@@ -1,6 +1,6 @@
-.banerPage {
-	position: relative;
-	background-image: url('./baner.svg');
+.promoPage {
+	display: flex;
+	background-image: url('./scale_1200 1.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 1280px;

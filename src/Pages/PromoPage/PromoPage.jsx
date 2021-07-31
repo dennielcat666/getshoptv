@@ -3,11 +3,12 @@ import {Button} from '../../Components/Button/Button'
 import {Image} from '../../Components/Image/Image'
 import {Link} from "react-router-dom";
 
+import styles from './PromoPage.module.css';
 import qr from './qr.svg'
 
 export function PromoPage() {
 	return (
-		<div>
+		<div className={styles.promoPage}>
 			<PromoBlock />
 			<div>
 				<Link to={'/'}><Button>крестик</Button></Link>
@@ -16,7 +17,6 @@ export function PromoPage() {
 					<Image src={qr}/>
 				</div>
 			</div>
-			
 		</div>	
 	)
 }

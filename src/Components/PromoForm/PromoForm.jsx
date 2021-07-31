@@ -3,6 +3,7 @@ import InputMask from "react-input-mask";
 import {Button} from '../Button/Button'
 import {CheckBox} from '../CheckBox/CheckBox'
 import {getValidate} from '../../api'
+
 import styles from './PromoForm.module.css';
 import cn from 'classnames'
 
@@ -25,7 +26,7 @@ export function PromoForm({onSubmit}) {
 
 	const renderCheckBox = () => {
 		if (isError) {
-			return <div>Неверно введён номер</div>
+			return <div className={cn(styles.error, styles.errorText)}>Неверно введён номер</div>
 		}
 		// if (isLoading) {
 		// 	return <div>Проверка номера...</div>
@@ -82,10 +83,10 @@ export function PromoForm({onSubmit}) {
 
 	return (
 		<div>
-			<div>Введите ваш номер мобильного телефона</div>
-			<form onSubmit={(e) => {checkValid(e)}}>
+			<div className={styles.promoName}>Введите ваш номер мобильного телефона</div>
+			<form className={styles.promoForm} onSubmit={(e) => {checkValid(e)}}>
 				<InputMask
-					className={cn(styles.number, {
+					className={cn(styles.number, styles.promoInputNumber, {
 						[styles.error]: isError,
 					})}
 					value={number}
@@ -93,19 +94,27 @@ export function PromoForm({onSubmit}) {
 					alwaysShowMask={true}
 					onChange={(e) => {setNumber(e.target.value.replace(/[^0-9]/g,"").slice(1))}}
 				/>
-				<div>и с Вами свяжется наш менеждер для дальнейшей консультации</div>
-				<div>
-					<Button onClick={handleClick} value='1'>1</Button>
-					<Button onClick={handleClick} value='2'>2</Button>
-					<Button onClick={handleClick} value='3'>3</Button>
-					<Button onClick={handleClick} value='4'>4</Button>
-					<Button onClick={handleClick} value='5'>5</Button>
-					<Button onClick={handleClick} value='6'>6</Button>
-					<Button onClick={handleClick} value='7'>7</Button>
-					<Button onClick={handleClick} value='8'>8</Button>
-					<Button onClick={handleClick} value='9'>9</Button>
-					<Button onClick={deleteChar}>стереть</Button>
-					<Button onClick={handleClick} value='0'>0</Button>
+				<div className={styles.promoSubText}>и с Вами свяжется наш менеждер для дальнейшей консультации</div>
+				<div className={styles.promoPanel}>
+					<div className={styles.promoPanelLine}>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='1'>1</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='2'>2</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='3'>3</Button>
+					</div>
+					<div className={styles.promoPanelLine}>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='4'>4</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='5'>5</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='6'>6</Button>
+					</div>
+					<div className={styles.promoPanelLine}>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='7'>7</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='8'>8</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='9'>9</Button>
+					</div>
+					<div className={styles.promoPanelLine}>
+						<Button className={styles.promoPanelDel} onClick={deleteChar}>стереть</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} value='0'>0</Button>
+					</div>
 				</div>
 				<div>
 					{renderCheckBox()}
