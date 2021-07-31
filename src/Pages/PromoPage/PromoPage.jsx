@@ -10,11 +10,13 @@ export function PromoPage() {
 	return (
 		<div className={styles.promoPage}>
 			<PromoBlock />
-			<div>
-				<Link to={'/'}><Button>крестик</Button></Link>
-				<div>
-					<div>Сканируйте QR-код для получения дополнительной информации</div>
-					<Image src={qr}/>
+			<div className={styles.promoPageInfo}>
+				<Link to={'/'}>
+					<Button className={styles.promoPageExit}></Button>
+				</Link>
+				<div className={styles.promoPageBlock}>
+					<div className={styles.promoPageSubText}>Сканируйте QR-код для получения дополнительной информации</div>
+					<Image className={styles.promoPageImg} src={qr}/>
 				</div>
 			</div>
 		</div>	

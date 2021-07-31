@@ -1,8 +1,74 @@
 .promoPage {
 	display: flex;
+	justify-content: space-between;
 	background-image: url('./scale_1200 1.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 1280px;
 	height: 720px;
+}
+
+.promoPageInfo {
+	text-align: right;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promoPageExit {
+	position: relative;
+	height: 52px;
+	width: 88px;
+	background-color: #ffffff;
+	color: #000000;
+	margin: 20px 20px;
+}
+
+.promoPageExit::after {
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-image: url('./cross.svg');
+	background-repeat: no-repeat;
+	width: 28.68px;
+	height: 28.68px;
+}
+
+/* .promoPageExit::after {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url('./Line 2.svg');
+	background-repeat: no-repeat;
+	width: 28.68px;
+} */
+
+.promoPageBlock {
+	display: flex;
+	align-items: center;
+	margin: 40px 40px;
+}
+
+.promoPageSubText {
+	display: flex;
+	align-items: center;
+	height: 76px;
+	width: 194px;
+	margin-right: 10px;
+	text-transform: uppercase;
+	font-family: 'Roboto';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: right;
+	color: #ffffff;
+}
+
+.promoPageImg {
+	max-width: 110px;
+	width: 100%;
+	height: 110px;
 }

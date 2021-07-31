@@ -14,7 +14,7 @@ export function PromoForm({onSubmit}) {
 	const [disabled, setDisabled] = useState(true)
 	const [isError, setIsError] = useState(false)
 	const [isLoading, setIsLoading] = useState(false)
-	const validNum = false /* не забыть выключить */
+	const validNum = true /* не забыть выключить */
 
 	const handleClick = (e) => {
 		if (number.length >= 10) {
@@ -29,7 +29,7 @@ export function PromoForm({onSubmit}) {
 			return <div className={cn(styles.error, styles.errorText)}>Неверно введён номер</div>
 		}
 		// if (isLoading) {
-		// 	return <div>Проверка номера...</div>
+		// 	return <div className={styles.loader}>Проверка номера...</div>
 		// }
 		return <CheckBox checked={checked} onChange={setCheck} />
 	}
@@ -121,6 +121,7 @@ export function PromoForm({onSubmit}) {
 					{/* {isError ? <div>Неверно введён номер</div> : <CheckBox checked={checked} onChange={setCheck} />} */}
 				</div>
 				<Button
+					className={styles.promoButton}
 					type="submit"
 					disabled={disabled}>
 					Подтвердить номер

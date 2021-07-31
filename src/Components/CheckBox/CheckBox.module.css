@@ -1,15 +1,38 @@
+.checkboxLabel {
+	display: flex;
+	align-items: center;
+	height: 52px;
+	margin-left: 15px;
+	margin-top: 33px;
+}
+
 .input {
 	display: none;
 }
 
 .checkbox {
-	width: 40px;
+	width: 100%;
+	max-width: 40px;
 	height: 40px;
-	border: 2px solid #000000	;
+	border: 2px solid #000000;
+	cursor: pointer;
 }
 
 .checked{
 	background-image: url('./check.svg');
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.checkboxLabelText {
+	display: flex;
+	align-items: center;
+	color: #565656;
+	font-family: 'Roboto';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	text-align: left;
+	margin-left: 20px;
 }

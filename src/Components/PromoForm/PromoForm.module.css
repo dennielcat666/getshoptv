@@ -43,6 +43,24 @@
 	font-weight: 500;
 	line-height: 19px;
 	text-align: center;
+	margin-top: 33px;
+}
+
+.loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	height: 52px;
+	width: 284px;
+	text-transform: uppercase;
+	font-family: 'Roboto';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 19px;
+	text-align: center;
+	margin-top: 33px;
 }
 
 .promoSubText {
@@ -73,7 +91,7 @@
 	width: 88px;
 	border-radius: 0px;
 	padding: 12px 30px 12px 30px;
-
+	color: #000000;
 }
 
 .promoPanelNumber:hover {
@@ -87,9 +105,22 @@
 	width: 188px;
 	border-radius: 0px;
 	padding: 16px 39px 16px 39px;
+	color: #000000;
 }
 
 .promoPanelDel:hover {
 	background-color: #000000;
 	color: #ffffff;
+}
+
+.promoButton {
+	margin-top: 15px;
+	width: 284px;
+	height: 52px;
+	font-family: 'Roboto';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 19px;
+	text-align: center;
 }
