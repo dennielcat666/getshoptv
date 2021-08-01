@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import YouTube from 'react-youtube';
 import {Baner} from '../../Components/Baner/Baner'
 
@@ -12,33 +12,43 @@ export function BanerPage() {
 		height: '720',
 		width: '1280',
 		playerVars: {
-		  autoplay: 1,
-		  cc_load_policy: 0,
-		  controls: 0,
-		  disablekb: 0,
-		  start: 1049,
-		  end: 1102,
-		  fs: 0,
-		  iv_load_policy: 3,
-		  loop: 1,
-		  modestbranding: 1,
-		  rel: 0,
-		  showinfo: 0,
-		  autohide: 1
+			autoplay: 1,
+			cc_load_policy: 0,
+			controls: 0,
+			disablekb: 1,
+			start: 1061,
+			end: 1102,
+			fs: 0,
+			iv_load_policy: 3,
+		  	loop: 1,
+			playlist: "dbvi_S3fy2M",
+			modestbranding: 1,
+			rel: 0,
+			showinfo: 0,
+			mute: 1
 		},
 	  };
-
-	// useEffect(() => {
-	// 	setTimeout(() => {setShowBaner(true)}, 5000)
-	// })
 
 	const onPlay = () => {
 		setTimeout(() => {setShowBaner(true)}, 5000)
 	}
 
+	const onReady = (e) => {
+		// встроенные опции ютуба (autoplay и loop)
+		// не всегда корректно отрабатывают, поэтому использую встроенные 
+		// методы
+		console.log('target', e.target);
+		e.target.playVideo()
+		setInterval(() => {e.target.seekTo(1061)}, 41000)
+	}
+
 	return (
 		<div className={styles.banerPage}>
-			<YouTube videoId="dbvi_S3fy2M" opts={opts} onPlay={onPlay()}/>
+			<div className={styles.videoBackground}>
+				<div className={styles.videoForeground}>
+					<YouTube videoId="dbvi_S3fy2M" opts={opts} onReady={onReady} onPlay={onPlay()}/>
+				</div>
+			</div>
 			{showBaner && <Baner/>}
 		</div>	
 	)
