@@ -86,31 +86,21 @@
 }
 
 .promoPanelNumber {
-	background-color: transparent;
+	/* background-color: transparent; */
 	height: 52px;
 	width: 88px;
 	border-radius: 0px;
 	padding: 12px 30px 12px 30px;
-	color: #000000;
-}
-
-.promoPanelNumber:hover {
-	background-color: #000000;
-	color: #ffffff;
+	/* color: #000000; */
 }
 
 .promoPanelDel {
-	background-color: transparent;
+	/* background-color: transparent; */
 	height: 52px;
 	width: 188px;
 	border-radius: 0px;
 	padding: 16px 39px 16px 39px;
-	color: #000000;
-}
-
-.promoPanelDel:hover {
-	background-color: #000000;
-	color: #ffffff;
+	/* color: #000000; */
 }
 
 .promoButton {

@@ -1,7 +1,7 @@
 .promoPage {
 	display: flex;
 	justify-content: space-between;
-	background-image: url('./scale_1200 1.svg');
+	background-image: url('./background.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 1280px;
@@ -19,30 +19,18 @@
 	position: relative;
 	height: 52px;
 	width: 88px;
+	background-image: url('./cross_black.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-color: #ffffff;
 	color: #000000;
 	margin: 20px 20px;
 }
 
-.promoPageExit::after {
-	content: '';
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	background-image: url('./cross.svg');
-	background-repeat: no-repeat;
-	width: 28.68px;
-	height: 28.68px;
+.promoPageExit:hover,
+.promoPageExit:focus {
+	background-image: url('./cross_white.svg');
 }
-
-/* .promoPageExit::after {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	background-image: url('./Line 2.svg');
-	background-repeat: no-repeat;
-	width: 28.68px;
-} */
 
 .promoPageBlock {
 	display: flex;

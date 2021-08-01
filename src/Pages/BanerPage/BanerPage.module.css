@@ -1,6 +1,6 @@
 .banerPage {
 	position: relative;
-	background-image: url('./baner.svg');
+	background-image: url('./background.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 1280px;

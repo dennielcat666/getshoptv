@@ -39,13 +39,17 @@
 }
 
 .banerButton {
-	color: #86D3F4;
 	line-height: 18.75px;
 	height: 52px;
 	width: 156px;
 	border-radius: 0px;
 	padding: 16px;
 	margin-top: 20px;
+}
+
+.banerButton:hover,
+.banerButton:focus {
+	color: #86D3F4;
 }
 
 .banerLink {

@@ -9,11 +9,17 @@
 	letter-spacing: 0em;
 	text-align: center;
 	cursor: pointer;
+	background-color: transparent;
+	color: #000000;
+}
+
+.button:hover,
+.button:focus {
 	background-color: #000000;
 	color: #ffffff;
 }
 
-.disabled {
+.button.disabled {
 	background-color: transparent;
 	border: 1px solid #4E4E4E;
 	color: #4E4E4E;
