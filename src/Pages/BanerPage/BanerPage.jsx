@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import YouTube from 'react-youtube';
 import {Baner} from '../../Components/Baner/Baner'
 
@@ -9,7 +9,7 @@ export function BanerPage() {
 	const [showBaner, setShowBaner] = useState(false)
 
 	const opts = {
-		height: '720',
+		height: '780',
 		width: '1280',
 		playerVars: {
 			autoplay: 1,
