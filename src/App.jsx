@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import {BanerPage} from './Pages/BanerPage/BanerPage'
 import {PromoPage} from './Pages/PromoPage/PromoPage'
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import {scalePage} from './helper'
 
 import styles from './App.module.css';
