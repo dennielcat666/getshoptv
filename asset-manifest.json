@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/getshoptv/static/css/main.1e1747eb.chunk.css",
+    "main.js": "/getshoptv/static/js/main.9f6561eb.chunk.js",
+    "main.js.map": "/getshoptv/static/js/main.9f6561eb.chunk.js.map",
+    "runtime-main.js": "/getshoptv/static/js/runtime-main.68077f53.js",
+    "runtime-main.js.map": "/getshoptv/static/js/runtime-main.68077f53.js.map",
+    "static/js/2.ec7b981c.chunk.js": "/getshoptv/static/js/2.ec7b981c.chunk.js",
+    "static/js/2.ec7b981c.chunk.js.map": "/getshoptv/static/js/2.ec7b981c.chunk.js.map",
+    "index.html": "/getshoptv/index.html",
+    "static/css/main.1e1747eb.chunk.css.map": "/getshoptv/static/css/main.1e1747eb.chunk.css.map",
+    "static/js/2.ec7b981c.chunk.js.LICENSE.txt": "/getshoptv/static/js/2.ec7b981c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/getshoptv/static/media/Roboto700.ed56a6ee.woff2",
+    "static/media/PromoPage.module.css": "/getshoptv/static/media/cross_white.a9596767.svg",
+    "static/media/BanerPage.module.css": "/getshoptv/static/media/background.9eaf1f56.svg",
+    "static/media/CheckBox.module.css": "/getshoptv/static/media/check.34f19d5f.svg",
+    "static/media/qr.5350f771.svg": "/getshoptv/static/media/qr.5350f771.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68077f53.js",
+    "static/js/2.ec7b981c.chunk.js",
+    "static/css/main.1e1747eb.chunk.css",
+    "static/js/main.9f6561eb.chunk.js"
+  ]
+}
