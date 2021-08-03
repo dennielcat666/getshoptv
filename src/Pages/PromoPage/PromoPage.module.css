@@ -4,8 +4,17 @@
 	background-image: url('./background.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 1280px;
+}
+
+.promoBlock {
+	display: flex;
+    align-items: center;
+	justify-content: center;
 	height: 720px;
+	width: 380px;
+	border-radius: 0px;
+	padding: 40px 48px 40px 48px;
+	background-color: #86D3F4;
 }
 
 .promoPageInfo {

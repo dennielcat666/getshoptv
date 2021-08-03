@@ -23,6 +23,11 @@
 	line-height: 38px;
 	height: 38px;
 	width: 280px;
+	border: 1px solid #86D3F4;
+}
+
+.promoInputNumber:focus {
+	border: 1px solid #000000;
 }
 
 .error {
@@ -86,21 +91,22 @@
 }
 
 .promoPanelNumber {
-	/* background-color: transparent; */
 	height: 52px;
 	width: 88px;
 	border-radius: 0px;
 	padding: 12px 30px 12px 30px;
-	/* color: #000000; */
 }
 
 .promoPanelDel {
-	/* background-color: transparent; */
 	height: 52px;
-	width: 188px;
+	width: 183px;
 	border-radius: 0px;
 	padding: 16px 39px 16px 39px;
-	/* color: #000000; */
+}
+
+.promoChackbox {
+	margin-left: 7px;
+	margin-top: 33px;
 }
 
 .promoButton {

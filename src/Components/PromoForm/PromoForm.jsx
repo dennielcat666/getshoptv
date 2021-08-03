@@ -14,7 +14,7 @@ export function PromoForm({onSubmit}) {
 	const [disabled, setDisabled] = useState(true)
 	const [isError, setIsError] = useState(false)
 	const [isLoading, setIsLoading] = useState(false)
-	const validNum = true /* не забыть выключить */
+	const validNum = false /* не забыть выключить */
 
 	const handleClick = (e) => {
 		if (number.length >= 10) {
@@ -31,7 +31,7 @@ export function PromoForm({onSubmit}) {
 		// if (isLoading) {
 		// 	return <div className={styles.loader}>Проверка номера...</div>
 		// }
-		return <CheckBox checked={checked} onChange={setCheck} />
+		return <CheckBox checked={checked} onChange={setCheck} dataFocus='checkbox'/>
 	}
 
 	const deleteChar = () => {
@@ -40,9 +40,6 @@ export function PromoForm({onSubmit}) {
 	}
 
 	useEffect(() => {
-		console.log('useEffect');
-		console.log('useEffect number', number)
-		console.log('useEffect number.length', number.length)
 		if (number.length === 10 && checked) {
 			setDisabled(false)
 			return
@@ -86,6 +83,7 @@ export function PromoForm({onSubmit}) {
 			<div className={styles.promoName}>Введите ваш номер мобильного телефона</div>
 			<form className={styles.promoForm} onSubmit={(e) => {checkValid(e)}}>
 				<InputMask
+					data-focus='input_phone'
 					className={cn(styles.number, styles.promoInputNumber, {
 						[styles.error]: isError,
 					})}
@@ -97,30 +95,30 @@ export function PromoForm({onSubmit}) {
 				<div className={styles.promoSubText}>и с Вами свяжется наш менеждер для дальнейшей консультации</div>
 				<div className={styles.promoPanel}>
 					<div className={styles.promoPanelLine}>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='1'>1</Button>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='2'>2</Button>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='3'>3</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_1' value='1'>1</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_2' value='2'>2</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_3' value='3'>3</Button>
 					</div>
 					<div className={styles.promoPanelLine}>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='4'>4</Button>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='5'>5</Button>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='6'>6</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_4' value='4'>4</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_5' data-init-focus value='5'>5</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_6' value='6'>6</Button>
 					</div>
 					<div className={styles.promoPanelLine}>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='7'>7</Button>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='8'>8</Button>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='9'>9</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_7' value='7'>7</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_8' value='8'>8</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_9' value='9'>9</Button>
 					</div>
 					<div className={styles.promoPanelLine}>
-						<Button className={styles.promoPanelDel} onClick={deleteChar}>стереть</Button>
-						<Button className={styles.promoPanelNumber} onClick={handleClick} value='0'>0</Button>
+						<Button className={styles.promoPanelDel} onClick={deleteChar} data-focus='phone_delete'>стереть</Button>
+						<Button className={styles.promoPanelNumber} onClick={handleClick} data-focus='phone_0' value='0'>0</Button>
 					</div>
 				</div>
-				<div>
+				<div className={styles.promoChackbox}>
 					{renderCheckBox()}
-					{/* {isError ? <div>Неверно введён номер</div> : <CheckBox checked={checked} onChange={setCheck} />} */}
 				</div>
 				<Button
+					data-focus='phone_submit'
 					className={styles.promoButton}
 					type="submit"
 					disabled={disabled}>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import YouTube from 'react-youtube';
 import {Baner} from '../../Components/Baner/Baner'
 
