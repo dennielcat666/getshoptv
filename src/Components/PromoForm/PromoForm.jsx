@@ -16,17 +16,12 @@ export function PromoForm({onSubmit}) {
 	const [isError, setIsError] = useState(false)
 	const [isLoading, setIsLoading] = useState(false)
 
-	// имитация ответа от валидатора
-	// true - номер существует
-	// false - номер не существует
-	// const validNum = false
-
 	const handleClick = (e) => {
 		if (number.length >= 10) {
 			return
 		}
 		
-		setNumber(`${number}`+`${e.target.value}`)
+		setNumber(`${number}${e.target.value}`)
 	}
 
 	const renderCheckBox = () => {
@@ -59,21 +54,12 @@ export function PromoForm({onSubmit}) {
 		setDisabled(true)
 	}, [number, checked])
 
-
-	/* Для имитации проверки номера телефона без валидатора */
-	// const checkValid = (e) => {
-	// 	e.preventDefault()
-	// 	if (validNum === true) {
-	// 		return onSubmit(false)
-	// 	}
-	// 	setIsError(true)
-	// }
-
 	const checkValid = (e) => {
 		e.preventDefault()
 		setIsLoading(true)
 		getValidate(number)
 			.then(res => {
+				console.log(number);
 				console.log('res', res);
 				console.log('res.valid', res.valid);
 				if (res.valid === true) {

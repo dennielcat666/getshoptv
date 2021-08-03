@@ -54,6 +54,7 @@ export function PromoPage() {
 		return () => {
 			document.removeEventListener('keydown', changeFocus)
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [focusButton])
 
 	return (
