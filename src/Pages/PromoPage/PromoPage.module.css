@@ -41,7 +41,7 @@
 	background-image: url('./cross_white.svg');
 }
 
-.promoPageBlock {
+.promoPageCode {
 	display: flex;
 	align-items: center;
 	margin: 40px 40px;
@@ -56,7 +56,6 @@
 	text-transform: uppercase;
 	font-family: 'Roboto';
 	font-size: 16px;
-	font-style: normal;
 	font-weight: 500;
 	line-height: 19px;
 	letter-spacing: 0em;

@@ -16,11 +16,19 @@ export function Baner() {
 	return (
 		<div className={styles.baner}>
 			<h1 className={styles.banerName}>Исполните мечту вашего малыша! <br/>Подарите ему собаку!</h1>
-			<Image className={styles.banerImg} src={qr}/>
+			<Image
+				className={styles.banerImg}
+				src={qr}
+			/>
 			<div className={styles.banerSubText}>Сканируйте QR-код <br/>или нажмите ОК</div>
 			<div className={styles.banerLink}>
 				<Link to={'/promo'}>
-					<Button className={styles.banerButton} data-init-focus>OK</Button>
+					<Button
+						className={styles.banerButton}
+						data-init-focus
+						>
+							OK
+						</Button>
 				</Link>
 			</div>
 			

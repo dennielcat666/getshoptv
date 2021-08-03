@@ -37,7 +37,6 @@ export function BanerPage() {
 		// встроенные опции ютуба (autoplay и loop)
 		// не всегда корректно отрабатывают, поэтому использую встроенные 
 		// методы
-		console.log('target', e.target);
 		e.target.playVideo()
 		setInterval(() => {e.target.seekTo(1061)}, 41000)
 	}
@@ -46,7 +45,12 @@ export function BanerPage() {
 		<div className={styles.banerPage}>
 			<div className={styles.videoBackground}>
 				<div className={styles.videoForeground}>
-					<YouTube videoId="dbvi_S3fy2M" opts={opts} onReady={onReady} onPlay={onPlay()}/>
+					<YouTube
+						videoId="dbvi_S3fy2M"
+						opts={opts}
+						onReady={onReady}
+						onPlay={onPlay()}
+					/>
 				</div>
 			</div>
 			{showBaner && <Baner/>}

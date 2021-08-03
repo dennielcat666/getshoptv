@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './CheckBox.module.css';
 import cn from 'classnames'
 
@@ -5,12 +6,11 @@ export function CheckBox({checked, onChange, dataFocus}) {
 	return (
 		<label 
 			onKeyDown={(e) => {
-				console.log('e.code', e.code);
 				if (e.code === 'Enter') {
 					onChange(!checked)
 				}
 			}}
-			tabindex={0}
+			tabIndex={0}
 			data-focus={dataFocus}
 			className={styles.checkboxLabel}
 		>
@@ -23,8 +23,15 @@ export function CheckBox({checked, onChange, dataFocus}) {
 			<div
 				className={cn(styles.checkbox, {
 					[styles.checked]: checked,
-				})}></div>
+				})}>
+			</div>
 			<div className={styles.checkboxLabelText}>Согласие на обработку персональных данных</div>
 		</label>
 	)
+}
+
+CheckBox.propTypes = {
+	checked: PropTypes.bool,
+	onChange: PropTypes.func,
+	dataFocus: PropTypes.string,
 }

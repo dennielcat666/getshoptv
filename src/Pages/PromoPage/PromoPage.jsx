@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import {Link} from "react-router-dom";
-// import {PromoBlock} from '../../Components/PromoBlock/PromoBlock'
 import {PromoForm} from '../../Components/PromoForm/PromoForm'
 import {PromoFinal} from '../../Components/PromoFinal/PromoFinal'
 import {Button} from '../../Components/Button/Button'
@@ -47,7 +46,6 @@ export function PromoPage() {
 			return
 		}
 		nextStep.focus()
-		console.log('nextStep', nextStep);
 		setfocusButton(nextStep.getAttribute('data-focus'))
 	}
 
@@ -65,9 +63,13 @@ export function PromoPage() {
 			</div>
 			<div className={styles.promoPageInfo}>
 				<Link to={'/'}>
-					<Button data-init-focus={!showForm} data-focus='exit' className={styles.promoPageExit}></Button>
+					<Button
+						data-init-focus={!showForm}
+						data-focus='exit'
+						className={styles.promoPageExit}
+					/>
 				</Link>
-				<div className={styles.promoPageBlock}>
+				<div className={styles.promoPageCode}>
 					<div className={styles.promoPageSubText}>Сканируйте QR-код для получения дополнительной информации</div>
 					<Image className={styles.promoPageImg} src={qr}/>
 				</div>
