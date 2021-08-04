@@ -1,6 +1,6 @@
-const apiValidatePhoneNumber = "http://apilayer.net/api/validate?access_key=6b5739224290d91f8c7a860dce9a6efd"
+const apiValidatePhoneNumber = "https://phonevalidation.abstractapi.com/v1/?api_key=65ee17068049496b986a09462736e299"
 
 export function getValidate(number) {
-	return fetch(`${apiValidatePhoneNumber}&number=${number}&country_code=RU&format=1`)
+	return fetch(`${apiValidatePhoneNumber}&phone=7${number}`)
 		.then(res => res.json())
 }
