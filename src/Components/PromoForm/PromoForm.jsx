@@ -59,9 +59,6 @@ export function PromoForm({onSubmit}) {
 		setIsLoading(true)
 		getValidate(number)
 			.then(res => {
-				console.log(number);
-				console.log('res', res);
-				console.log('res.valid', res.valid);
 				if (res.valid === true) {
 					return onSubmit(false)
 				}
